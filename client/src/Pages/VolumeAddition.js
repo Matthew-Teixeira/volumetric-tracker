@@ -66,10 +66,13 @@ const VolumeAddition = () => {
   const onCalc = (event) => {
     event.preventDefault();
     const frac1A = new FracTank(tankData.height);
+    console.log(typeof calcFormData.dtp);
+    console.log(calcFormData.dtw);
     const volumes = frac1A.allVolumes(
       parseFloat(calcFormData.dtp),
       parseFloat(calcFormData.dtw)
     );
+    console.log(frac1A);
     setVolumeData(volumes);
   };
 

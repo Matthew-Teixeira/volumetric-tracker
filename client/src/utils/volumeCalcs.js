@@ -4,11 +4,11 @@ class FracTank {
   }
 
   totalHeight(firstRead) {
-    return this.height - firstRead * 12;
+    return (this.height * 12) - (firstRead * 12);
   }
 
   waterHeight(secondRead) {
-    return this.height - secondRead * 12;
+    return (this.height * 12) - (secondRead * 12);
   }
 
   convertWithChart(height) {
@@ -23,6 +23,9 @@ class FracTank {
 
   totalVolume(height) {
     height = this.totalHeight(height);
+
+    console.log("\nheight");
+    console.log(height);
     const volume = this.convertWithChart(height);
     return volume;
   }
@@ -40,6 +43,9 @@ class FracTank {
   allVolumes(dtp, dtw) {
     let totalVol = parseFloat(this.totalVolume(dtp));
     let waterVol = parseFloat(this.waterVolume(dtw));
+
+    console.log("\nwaterVol");
+    console.log(waterVol);
     if (dtp === 0) {
       totalVol = waterVol;
     }
