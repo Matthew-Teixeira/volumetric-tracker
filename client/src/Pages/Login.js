@@ -4,8 +4,8 @@ import {AiOutlineMail, AiFillLock} from "react-icons/ai"
 
 const Login = () => {
   const [formData, setFormData] = useState({
-    email: "",
-    password: "",
+    email: "default@gmail.com",
+    password: "123456",
   });
 
   const loginUser = async (email, password) => {
@@ -59,6 +59,7 @@ const Login = () => {
                 onChange={onChange}
                 name="email"
                 type="email"
+                value={formData.email}
                 className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full text-center"
                 required
               />
@@ -75,6 +76,7 @@ const Login = () => {
                 onChange={onChange}
                 name="password"
                 type="password"
+                value={formData.password}
                 className="bg-indigo-50 px-4 py-2 outline-none rounded-md w-full text-center"
                 required
               />
